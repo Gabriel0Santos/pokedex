@@ -12,9 +12,7 @@ const btnNext = document.querySelector('.btn-next')
 const fetchPokemon = async(pokemon) => {
 
     const APIresponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-
     if (APIresponse.status == 200) {
-
     const data = await APIresponse.json();
     return data;
     }
@@ -22,11 +20,8 @@ const fetchPokemon = async(pokemon) => {
 
 const renderPokemon = async (pokemon) => {
     pokemonName.innerHTML = 'Loading...'
-    
-
     data = await fetchPokemon(pokemon);
-
-
+    
 if (data) {
         pokemonImage.style.display = 'block'
         pokemonName.innerHTML = data.name 
@@ -41,14 +36,11 @@ if (data) {
         pokemonNumber.innerHTML = '';
         input.value =''
     }
-
-    
 }
 // -- configurações dos botões --
 form.addEventListener ('submit', (event) => {
     event.preventDefault();
     renderPokemon(input.value.toLowerCase())
-    
 })
 
 let pokemonSearch = 1;
@@ -61,7 +53,6 @@ btnNext.addEventListener ('click', () => {
 
 btnPrev.addEventListener ('click', () => {
     if (pokemonSearch > 1) {
-   
     pokemonSearch -= 1
     renderPokemon(pokemonSearch)
 }
