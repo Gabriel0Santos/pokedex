@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Oxanium', cursive;
-
 }
 
 body {
@@ -13,7 +12,6 @@ body {
   background-image: url(/View/img/image.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  /*background: linear-gradient(to bottom, #75e7c1, #fde183);*/
   min-height: 100vh;
 }
 
@@ -50,7 +48,6 @@ main {
 .pokemon__name{
   color: #3a444d;
   text-transform: capitalize;
-
 }
 
 .form{
@@ -70,7 +67,6 @@ main {
   color: #3a444d;
   font-size: clamp(8px, 5vw, 1rem);
   box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
-  
 }
 
 .buttons {
